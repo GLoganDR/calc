@@ -56,6 +56,13 @@ describe('Calc', function(){
     });
   });
 
+  describe('.stdev', function(){
+    it('should find the standard deviation of the array of numbers', function(){
+      var stdev = Calc.stdev([1,3,5,7,9]);
+      expect(stdev).to.be.closeTo(2.83, 0.01);
+    });
+  });
+
 });
 
 

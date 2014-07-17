@@ -67,5 +67,22 @@ Calc.mean = function(numbs){
   return sum;
 };
 
+Calc.stdev = function(numbs){
+  var sum = 0;
+  var means = [];
+
+  sum = Calc.mean(numbs);
+
+  for (var i = 0; i < numbs.length; i++){
+    var x = Math.pow (numbs[i]-sum, 2);
+    means.push(x);
+  }
+
+  sum = Calc.mean(means);
+
+  sum = Math.sqrt(sum);
+  
+  return sum;
+};
 
 module.exports = Calc;
